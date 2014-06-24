@@ -1,0 +1,6 @@
+1.2.1 - Strip hardcoded style from textareas; updated SAMPLE OUTPUT to reflect new field types (email, telephone, web address, date, and datetime)
+1.2 - Concrete 5.5 compatibility (fixed label "for" attributes so they work with the id's that the block controller is now outputting); now adds label tags around checkbox list and radio button list items so clicking on the item text checks the box / radio button.
+1.1.1 - Removed insertion of titles into textboxes and textareas because it served no purpose (in-field-label javascript doesn't work because jquery.form.js gathers field values before submit event triggers the clearing of the labels).
+1.1 - Fixed field labels so they work properly and pass W3C validation (thanks Riotaj!), and added field questions as titles so labelify js can be added easily.
+1.01 - Fixed invalid HTML (div inside a span), and streamlined the input wrappers. Also added sample output for success and error messages.
+1.0 - Initial Version

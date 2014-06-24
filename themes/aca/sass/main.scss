@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+@import "compass/css3";
+@import "vars";
+
+body {
+  position: relative;
+  background: white;
+  -webkit-font-smoothing: antialiased;
+  font-family: "din";
+}
+
+#intro {
+  @include background-size(cover);
+  position: fixed;
+  background: url("../images/accueil/background.jpg") no-repeat center fixed;
+  width: 100%;
+  height: 100%;
+
+  .center {
+    text-align: center;
+    margin: 300px auto 0 auto;
+
+    h2 {
+      font-family: "din-bold";
+      font-size: 2.75rem;
+      color: #fff;
+    }
+
+    span {
+      font-size: 1.3rem;
+      color: $primary-color;
+      margin-right: 25px;
+    }
+
+    .button {
+      @include border-radius(10px);
+      margin-top: 75px;
+      padding: 10px 30px;
+    }
+  }
+}
+
+html, body, #site {
+  height: 100%;
+  min-height: 100%;
+}
+
+#site {
+  .address {
+    h2 {
+      color: white;
+      font-size: 50px;
+      font-size: 3.2rem;
+    }
+  }
+
+  .contact-social-link {
+    a {
+      color: #fff;
+    }
+  }
+
+  .projets-list {
+    margin-top: 25px;
+
+    .projet {
+      position: relative;
+      display: table;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      margin-bottom: 50px;
+
+      @media #{$small-only} {
+        height: 200px;
+      }
+
+      @media #{$medium-only} {
+        height: 250px;
+      }
+
+      @media #{$large-up} {
+        height: 300px;
+      }
+
+      a{
+        @include single-transition(opacity, 0.5s);
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .title {
+        @include single-transition(opacity, 0.5s);
+        opacity: 0;
+        padding: 15px 0;
+        text-align: center;
+        background: rgba(80, 1, 28, 0.6);
+        color: #fff;
+        font-size: 1.3rem;
+      }
+
+      &:hover {
+        a {
+          background: rgba(80, 1, 28, 0.2);
+          .title {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  height: 193px;
+  .top-bar {
+    position: relative;
+
+    svg.shape {
+      position: absolute;
+    }
+
+    .name {
+      padding: 20px 250px 0 40px;
+      h1 {
+        font-size: 0.718rem;
+        line-height: 1rem;
+      }
+    }
+
+    ul.nav {
+      a, li {
+        font-weight: lighter;
+        font-family: "din-light";
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: 0px;
+        display: inline;
+        color: #000;
+      }
+
+      li {
+        &:after {
+          padding: 0 10px;
+          content: "/";
+        }
+
+        &:last-of-type:after {
+          content: "";
+        }
+
+        &.nav-selected {
+          a {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  margin-top: 60px;
+}
+
+#ccm-highlighter {
+  margin-top: -49px;
+}
+
+@import "overlay/svgLoader";

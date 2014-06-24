@@ -1,0 +1,163 @@
+<!--
+Sample HTML output for the custom template.
+Two of every field type is represented here
+(one required and one not required).
+
+Note that wherever you see numbers (especially "7"),
+they will be replaced by different numbers in every form block,
+so don't rely on them for styling (use the classes instead).
+
+Note that your form will never show both "success" and "errors",
+but they are both placed here so you can see their markup.
+-->
+
+<div id="formblock7" class="formblock">
+  <form enctype="multipart/form-data" id="miniSurveyView7" class="miniSurveyView" method="post" action="/path/to/index.php?cID=77&amp;bID=7&amp;arHandle=Main&amp;ccm_token=7777777777:77777777777777777777777777777777&amp;btask=passthru&amp;method=submit_form#7777777777">
+
+    <div class="success">Thanks!</div>
+
+	<div class="errors"> 
+      Please correct the following errors:
+      <div class="error">Complete required fields *</div>
+      <div class="error">Incorrect captcha code</div>
+      <div class="error">Invalid file extension.</div>
+      <div class="error">Invalid file.</div>
+    </div> 
+
+    <div class="fields">
+      <div class="field field-text">
+        <label for="Question8">First Question (Text)</label>
+        <input name="Question8" id="Question8" type="text" value="" />
+      </div>
+      <div class="field field-text">
+        <label for="Question9">Second Question (Required Text) <span class="required">*</span></label>
+        <input name="Question9" id="Question9" type="text" value="" />
+      </div>
+      <div class="field field-textarea">
+        <label for="Question10">Third Question (Textarea)</label>
+        <textarea name="Question10" id="Question10" cols="50" rows="3" ></textarea>
+      </div>
+      <div class="field field-textarea">
+        <label for="Question11">Fourth Question (Required Textarea) <span class="required">*</span></label>
+        <textarea name="Question11" id="Question11" cols="50" rows="3" ></textarea>
+      </div>
+      <div class="field field-radios">
+        <label>Fifth Question (Radio Buttons)</label>
+        <div class="radioList">
+          <div class="radioPair"><label><input name="Question12" type="radio" value="First Choice" />&nbsp;First Choice</label></div>
+          <div class="radioPair"><label><input name="Question12" type="radio" value="Second Choice" />&nbsp;Second Choice</label></div>
+          <div class="radioPair"><label><input name="Question12" type="radio" value="Third Choice" />&nbsp;Third Choice</label></div>
+        </div>
+      </div>
+      <div class="field field-radios">
+        <label>Sixth Question (Required Radio Buttons) <span class="required">*</span></label>
+        <div class="radioList">
+          <div class="radioPair"><label><input name="Question13" type="radio" value="First Choice" />&nbsp;First Choice</label></div>
+          <div class="radioPair"><label><input name="Question13" type="radio" value="Second Choice" />&nbsp;Second Choice</label></div>
+          <div class="radioPair"><label><input name="Question13" type="radio" value="Third Choice" />&nbsp;Third Choice</label></div>
+        </div>
+      </div>
+      <div class="field field-select">
+        <label for="Question14">Seventh Question (Select Box)</label>
+        <select name="Question14" id="Question14">
+          <option value="" selected="selected">----</option>
+          <option>First Selection</option>
+          <option>Second Selection</option>
+          <option>Third Selection</option>
+        </select>
+      </div>
+      <div class="field field-select">
+        <label for="Question15">Eighth Question (Required Select Box) <span class="required">*</span></label>
+        <select name="Question15" id="Question15">
+          <option value="" selected="selected">----</option>
+          <option>First Selection</option>
+          <option>Second Selection</option>
+          <option>Third Selection</option>
+        </select>
+      </div>
+      <div class="field field-checkboxlist">
+        <label>Ninth Question (Checkbox List)</label>
+        <div class="checkboxList">
+          <div class="checkboxPair"><label><input name="Question16_0" type="checkbox" value="Check One" />&nbsp;Check One</label></div>
+          <div class="checkboxPair"><label><input name="Question16_1" type="checkbox" value="Check Two" />&nbsp;Check Two</label></div>
+          <div class="checkboxPair"><label><input name="Question16_2" type="checkbox" value="Check Three" />&nbsp;Check Three</label></div>
+        </div>
+      </div>
+      <div class="field field-checkboxlist">
+        <label>Tenth Question (Required Checkbox List) <span class="required">*</span></label>
+        <div class="checkboxList">
+          <div class="checkboxPair"><label><input name="Question18_0" type="checkbox" value="Check One" />&nbsp;Check One</label></div>
+          <div class="checkboxPair"><label><input name="Question18_1" type="checkbox" value="Check Two" />&nbsp;Check Two</label></div>
+          <div class="checkboxPair"><label><input name="Question18_2" type="checkbox" value="Check Three" />&nbsp;Check Three</label></div>
+        </div>
+      </div>
+      <div class="field field-fileupload">
+        <label for="Question19">Eleventh Question (File Upload)</label>
+        <input type="file" name="Question19" id="Question19" />
+      </div>
+      <div class="field field-fileupload">
+        <label for="Question20">Twelfth Question (Required File Upload) <span class="required">*</span></label>
+        <input type="file" name="Question20" id="Question20" />
+      </div>
+      <div class="field field-email">
+	      <label for="Question21">Thirteenth Question (Email)</label>
+	      <input name="Question21" id="Question21" type="email" value="" />
+	    </div>
+      <div class="field field-email">
+	      <label for="Question22">Fourteenth Question (Required Email) <span class="required">*</span></label>
+	      <input name="Question22" id="Question22" type="email" value="" />
+	    </div>
+	    <div class="field field-telephone">
+	      <label for="Question23">Fifteenth Question (Telephone)</label>
+	      <input name="Question23" id="Question23" type="tel" value="" />
+	    </div>
+	    <div class="field field-telephone">
+	      <label for="Question24">Sixteenth Question (Required Telephone) <span class="required">*</span></label>
+	      <input name="Question24" id="Question24" type="tel" value="" />
+	    </div>
+	    <div class="field field-url">
+	      <label for="Question25">Seventeenth Question (Web Address)</label>
+	      <input name="Question25" id="Question25" type="url" value="" />
+	    </div>
+	    <div class="field field-url">
+	      <label for="Question26">Eighteenth Question (RequiredWeb Address) <span class="required">*</span></label>
+	      <input name="Question26" id="Question26" type="url" value="" />
+	    </div>
+	    <div class="field field-date">
+	      <label for="Question27">Nineteenth Question (Date)</label>
+	      <span class="ccm-input-date-wrapper" id="Question27_dw"><input id="Question27" name="Question27" class="ccm-input-date" value="7/7/1977" /></span>
+	      <script type="text/javascript">$(function() { $("#Question27").datepicker({ dateFormat: 'm/d/yy', changeYear: true, showAnim: 'fadeIn' }); });</script>
+	    </div>
+	    <div class="field field-date">
+	      <label for="Question28">Twentieth Question (Required Date) <span class="required">*</span></label>
+	      <span class="ccm-input-date-wrapper" id="Question28_dw"><input id="Question28" name="Question28" class="ccm-input-date" value="7/7/1977" /></span>
+	      <script type="text/javascript">$(function() { $("#Question28").datepicker({ dateFormat: 'm/d/yy', changeYear: true, showAnim: 'fadeIn' }); });</script>
+	    </div>
+      <div class="field field-datetime">
+	      <label for="Question29">Twenty-First Question (DateTime)</label>
+        <span class="ccm-input-date-wrapper" id="Question29_dw"><input id="Question29_dt" name="Question29_dt" class="ccm-input-date" value="10/10/2012"  /></span>
+        <span class="ccm-input-time-wrapper" id="Question29_tw"><select id="Question29_h" name="Question29_h" ><option value="1" >1</option><option value="2" >2</option><option value="3" >3</option><option value="4" >4</option><option value="5" >5</option><option value="6" >6</option><option value="7" selected>7</option><option value="8" >8</option><option value="9" >9</option><option value="10" >10</option><option value="11" >11</option><option value="12" >12</option></select>:<select id="Question29_m" name="Question29_m" ><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07"selected>07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>/select><select id="Question29_a" name="Question29_a" ><option value="AM" >AM</option><option value="PM" selected>PM</option></select></span>
+        <script type="text/javascript">$(function() { $("#Question29_dt").datepicker({ dateFormat: 'm/d/yy', changeYear: true, showAnim: 'fadeIn' }); });</script>
+      </div>
+      <div class="field field-datetime">
+	      <label for="Question30">Twenty-Second Question (Required DateTime) <span class="required">*</span></label>
+        <span class="ccm-input-date-wrapper" id="Question30_dw"><input id="Question30_dt" name="Question30_dt" class="ccm-input-date" value="10/10/2012"  /></span>
+        <span class="ccm-input-time-wrapper" id="Question30_tw"><select id="Question30_h" name="Question30_h" ><option value="1" >1</option><option value="2" >2</option><option value="3" >3</option><option value="4" >4</option><option value="5" >5</option><option value="6" >6</option><option value="7" selected>7</option><option value="8" >8</option><option value="9" >9</option><option value="10" >10</option><option value="11" >11</option><option value="12" >12</option></select>:<select id="Question30_m" name="Question30_m" ><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07"selected>07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>/select><select id="Question30_a" name="Question30_a" ><option value="AM" >AM</option><option value="PM" selected>PM</option></select></span>
+        <script type="text/javascript">$(function() { $("#Question30_dt").datepicker({ dateFormat: 'm/d/yy', changeYear: true, showAnim: 'fadeIn' }); });</script>
+      </div>
+    </div><!-- .fields -->
+
+    <div class="captcha">
+      <label>Please type the letters and numbers shown in the image.</label><br />
+      <div><img src="/path/to/index.php/tools/required/captcha?nocache=7777777777" alt="Captcha Code" onclick="this.src = '/path/to/index.php/tools/required/captcha?nocache='" class="ccm-captcha-image" /></div><br />
+      <div>Click the image to see another captcha.</div><br />
+      <div><input type="text" name="ccmCaptchaCode" class="ccm-input-captcha" /></div><br />
+    </div>
+
+    <input type="submit" name="Submit" class="submit" value="Submit" />
+
+    <input name="qsID" type="hidden" value="7777777777" />
+    <input name="pURI" type="hidden" value="/path/to/index.php?cID=77" />
+
+  </form>
+</div><!-- .formblock -->

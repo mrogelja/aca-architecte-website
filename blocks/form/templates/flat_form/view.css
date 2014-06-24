@@ -1,0 +1,51 @@
+.miniSurveyView .field {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.miniSurveyView input {
+    height: 3rem !important;
+}
+
+.miniSurveyView input,
+.miniSurveyView textarea{
+    font-family: "din-light" !important;
+    font-size: 1.5rem !important;
+}
+
+.miniSurveyView .field.field-textarea {
+    width: 100%;
+}
+
+.miniSurveyView .submit {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.miniSurveyView .errors{
+    color: #e00005;
+    margin: 0 0 10px 10px;
+}
+
+.miniSurveyView .errors .error{
+    padding: 5px 0 0 5px;
+}
+
+.miniSurveyView .success{
+    color: #db1b5d;
+    margin: 0 0 30px 10px;
+    font-size: 1.5rem;
+}
+
+.miniSurveyView .captcha{
+    margin-left: 10px;
+    clear: both;
+    display: block;
+}
+
+.miniSurveyView .captcha > div:nth-of-type(2){
+    font-family: "din-light" !important;
+    font-size: 0.85rem !important;
+    margin-top: -12px;
+}

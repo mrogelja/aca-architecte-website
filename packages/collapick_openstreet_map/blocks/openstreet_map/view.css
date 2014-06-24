@@ -1,0 +1,12 @@
+/* To modify layout, add css here */
+.olControlAttribution{
+	bottom:0px !important;
+}
+
+.olControlZoom{
+	z-index: 999 !important;
+}
+
+.olLayerGrid .olTileImage {
+	max-width: none ;
+}
