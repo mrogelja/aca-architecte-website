@@ -35,3 +35,7 @@
 "foundation/components/type",
 "foundation/components/offcanvas",
 "foundation/components/visibility";
+
+.top-bar-section li a:not(.button){
+  line-height: 70px;
+}

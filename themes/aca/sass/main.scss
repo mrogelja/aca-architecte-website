@@ -11,9 +11,20 @@ body {
 }
 
 #intro {
-  @include background-size(cover);
   position: fixed;
-  background: url("../images/accueil/background.jpg") no-repeat center fixed;
+
+  .carousel {
+    & > div {
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
   width: 100%;
   height: 100%;
 
@@ -48,10 +59,18 @@ html, body, #site {
 
 #site {
   .address {
+    span {
+      font-family: 'din-light';
+      font-size: 1.4vw !important;
+      font-style: normal !important;
+    }
+
     h2 {
+      font-family: 'din-bold';
       color: white;
-      font-size: 50px;
-      font-size: 3.2rem;
+      font-size: 48px !important;;
+      font-size: 3.0rem !important;;
+      font-size: 2.5vw !important;;
     }
   }
 
@@ -65,46 +84,75 @@ html, body, #site {
     margin-top: 25px;
 
     .projet {
+      box-sizing: border-box;
+      float: left;
       position: relative;
-      display: table;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      margin-bottom: 50px;
+      display: block;
+      padding: 10px;
 
       @media #{$small-only} {
-        height: 200px;
+        height: 300px;
+        width: 100%;
       }
 
       @media #{$medium-only} {
-        height: 250px;
+        height: 350px;
+        width: 50%;
       }
 
       @media #{$large-up} {
-        height: 300px;
+        height: 450px;
+        width: 33%;
       }
 
-      a{
-        @include single-transition(opacity, 0.5s);
-        display: table-cell;
-        vertical-align: middle;
-      }
+      .wrapper {
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: relative;
+        overflow: hidden;
 
-      .title {
-        @include single-transition(opacity, 0.5s);
-        opacity: 0;
-        padding: 15px 0;
-        text-align: center;
-        background: rgba(80, 1, 28, 0.6);
-        color: #fff;
-        font-size: 1.3rem;
-      }
+        .thumb {
+          @include single-transition(transform, 0.5s);
+          top: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          z-index: -1;
+        }
 
-      &:hover {
-        a {
-          background: rgba(80, 1, 28, 0.2);
-          .title {
+        figcaption.title {
+          @include single-transition(opacity, 0.5s);
+          display: table;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+
+          .text-wrapper {
+            display: table-cell;
+            vertical-align: middle;
+
+            & > span {
+              display: block;
+              width: 100%;
+              padding: 15px 0;
+              text-align: center;
+              background: rgba(80, 1, 28, 0.6);
+              color: #fff;
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+        &:hover {
+          .thumb {
+            @include transform(scale(1.1) translateY(-10px));
+            @include single-transition(transform, 0.5s);
+          }
+
+          figcaption.title {
+            background: rgba(80, 1, 28, 0.2);
             opacity: 1;
           }
         }

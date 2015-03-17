@@ -29,11 +29,11 @@ $warning-color: #f08a24;
 $info-color: #a0d3e8;
 
 /* Background color for the top bar */
-$topbar-bg: #fff;
-$topbar-bg-color: #444;
+$topbar-bg: rgba(255, 255, 255, 0);
+$topbar-bg-color: rgba(255, 255, 255, 0);
 
 /* Height and margin */
-$topbar-height: 70px;
+$topbar-height: 193px;
 $topbar-margin-bottom: 0;
 
 /* Control Input height for top bar */

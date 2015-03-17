@@ -19,14 +19,43 @@ $isHome = $p instanceof Page && !$p->isError() && $p->getCollectionID() == HOME_
 
 <body>
 
-<div id="loader" class="pageload-overlay <? if (!$isHome): ?>force show pageload-loading<? endif ?>" data-opening="m 40,-80 190,0 -305,290 C -100,140 0,0 40,-80 z">
+<div id="loader" class="pageload-overlay <? if (!$isHome): ?>force show pageload-loading<? endif ?>"
+     data-opening="m 40,-80 190,0 -305,290 C -100,140 0,0 40,-80 z">
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
         <path d="m 75,-80 155,0 0,225 C 90,85 100,30 75,-80 z"/>
     </svg>
 </div>
 
-<section id="intro" class="container <? if ($isHome): ?>show<? endif ?>">
+<?php if($isHome) :?>
+
+<link rel="stylesheet" href="<?= $this->getThemePath(); ?>/js/supersized/css/supersized.css"/>
+<script src="<?= $this->getThemePath(); ?>/js/supersized/js/supersized.3.2.7.min.js"></script>
+
+
+<section id="intro" class="container show">
+    <?php
+        for ($i = 1; $i <= 3; $i++){
+            $bgImages[] = array(
+                'image' =>  $this->getThemePath() . "/images/accueil/background-$i.jpg",
+                'thumb' =>  $this->getThemePath() . "/images/accueil/background-$i.jpg",
+                'title' => ''
+            );
+        }
+    ?>
+    <script>
+        $(function () {
+            $.supersized({
+                slide_interval          :   5000,		// Length between transitions
+                transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+                transition_speed		:	1000,		// Speed of transition
+                slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+                slides 					:   <?php echo json_encode($bgImages) ?>
+            });
+        });
+    </script>
+
     <div class="center">
+
         <img src="<?= $this->getThemePath(); ?>/images/logos/aca-logo-white.png">
 
         <h2>AUDREY CERFONTAINE ARCHITECTE</h2>
@@ -38,6 +67,7 @@ $isHome = $p instanceof Page && !$p->isError() && $p->getCollectionID() == HOME_
         <div id="button-pass-intro" class="button medium">Entrer</div>
     </div>
 </section>
+<?php endif; ?>
 
 <script>
     $(function () {
@@ -92,6 +122,8 @@ $isHome = $p instanceof Page && !$p->isError() && $p->getCollectionID() == HOME_
                         <h1>AUDREY CERFONTAINE ARCHITECTE</h1>
                     </a>
                 </li>
+
+                <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
             </ul>
 
             <section class="top-bar-section">

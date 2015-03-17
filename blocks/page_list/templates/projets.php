@@ -4,17 +4,16 @@ defined('C5_EXECUTE') or die("Access Denied.");
 $th = Loader::helper('text');
 $ih = Loader::helper('image');
 
-if (count($pages) < 8) {
-    for ($i = count($pages); $i < 8; $i++) {
-        $pages[] = $pages[0];
-    }
-}
+//if (count($pages) < 8) {
+//    for ($i = count($pages); $i < 8; $i++) {
+//        $pages[] = $pages[0];
+//    }
+//}
 
 ?>
 
-<div class="row projets-list">
+<div class="projets-list">
     <?php foreach ($pages as $page):
-
         // Prepare data for each page being listed...
         $title = $th->entities($page->getCollectionName());
         $url = $nh->getLinkToCollection($page);
@@ -25,14 +24,17 @@ if (count($pages) < 8) {
         $img = $page->getAttribute('image_handle');
         ?>
 
-        <div class="columns large-3 medium-4 small-12">
-            <div class="projet" style="background-image: url('<?php echo $img->getRelativePath(); ?>')">
-                <a href="<?php echo $url ?>" target="<?php echo $target ?>">
-                    <div class="title">
-                        <?php echo $title ?>
+        <a class="projet" href="<?php echo $url ?>" target="<?php echo $target ?>">
+            <div class="wrapper">
+                <div class="thumb" style="background-image: url('<?php echo $img->getRelativePath(); ?>')"></div>
+                <figcaption class="title">
+                    <div class="text-wrapper">
+                        <span>
+                            <?php echo $title ?>
+                        </span>
                     </div>
-                </a>
+                </figcaption>
             </div>
-        </div>
+        </a>
     <?php endforeach; ?>
 </div>
