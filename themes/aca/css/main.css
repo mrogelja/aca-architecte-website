@@ -150,7 +150,7 @@ body {
   position: relative;
   background: white;
   -webkit-font-smoothing: antialiased;
-  font-family: "din";
+  font-family: "din-light";
 }
 
 #intro {
@@ -219,23 +219,23 @@ html, body, #site {
   float: left;
   position: relative;
   display: block;
-  padding: 10px;
+  padding: 20px;
 }
 @media only screen and (max-width: 40em) {
   #site .projets-list .projet {
-    height: 300px;
+    height: 200350;
     width: 100%;
   }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   #site .projets-list .projet {
-    height: 350px;
+    height: 300px;
     width: 50%;
   }
 }
 @media only screen and (min-width: 64.063em) {
   #site .projets-list .projet {
-    height: 450px;
+    height: 350px;
     width: 33%;
   }
 }

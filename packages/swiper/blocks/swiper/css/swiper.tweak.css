@@ -1,0 +1,32 @@
+.swiper-container {
+    width: 100%;
+}
+
+@media only screen and (min-width: 64.063em){
+    .swiper-container {
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 64em) and (min-width: 40.063em){
+    .swiper-container {
+        height: 450px;
+    }
+}
+
+
+@media only screen and (max-width: 40em){
+    .swiper-container {
+        height: 450px;
+    }
+}
+
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-pagination-bullet-active{
+    background: #db1b5d;
+}

@@ -7,7 +7,7 @@ body {
   position: relative;
   background: white;
   -webkit-font-smoothing: antialiased;
-  font-family: "din";
+  font-family: "din-light";
 }
 
 #intro {
@@ -88,20 +88,20 @@ html, body, #site {
       float: left;
       position: relative;
       display: block;
-      padding: 10px;
+      padding: 20px;
 
       @media #{$small-only} {
-        height: 300px;
+        height: 200350;
         width: 100%;
       }
 
       @media #{$medium-only} {
-        height: 350px;
+        height: 300px;
         width: 50%;
       }
 
       @media #{$large-up} {
-        height: 450px;
+        height: 350px;
         width: 33%;
       }
 
